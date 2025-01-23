@@ -1,19 +1,88 @@
-ul#navigation{
+body {
+    font-size: 16px;
+
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+    
+    
+        .my-navigation{
+        display: grid;
+        grid-template:  1fr / 5% 80% 5% 5% 5%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #Accueil{
+        grid-column: 1;
+        text-align: center;
+    }
+    
+    #CV{
+        grid-column: 3;
+        text-align: center;
+    }
+    
+    #projets{
+        grid-column: 4;
+        text-align: center;
+    }
+    
+    #contact{
+        grid-column: 5;
+        text-align: center;
+    }
+
+}
+/*
+.my-navigation{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 
-.nav{
-    float: left;
+.my-nav{
+    padding: 2px;
 }
 
+
+
+ a{
+    text-decoration: none;
+    color: black;
+}
+*/
 h1#titre_principale{
     font-size: 2em;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: aquamarine;
 }
 
+.sous_titre{
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left : 200px;
+    color: aquamarine;
+}
+
+p#paragraphe_presentation{
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+}
