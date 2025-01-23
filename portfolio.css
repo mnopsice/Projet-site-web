@@ -15,7 +15,7 @@ body {
     }
     
     
-        .my-navigation{
+        .nav-item{
         display: grid;
         grid-template:  1fr / 5% 80% 5% 5% 5%;
         list-style-type: none;
@@ -45,6 +45,14 @@ body {
     }
 
 }
+
+.navbar-nav{
+    display: grid;
+    grid-template:  1fr / 5% 80% 5% 5% 5%;
+    margin: 0;
+    padding: 0;
+}
+
 /*
 .my-navigation{
     list-style-type: none;
