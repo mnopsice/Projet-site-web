@@ -1,7 +1,7 @@
 body {
     font-size: 16px;
     background-color: white;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrer le contenu */
     padding: 0 10%; /* 10% de marge à gauche et à droite */
     max-width: 1200px; /* Largeur maximale du conteneur */
 }
@@ -12,11 +12,28 @@ body {
     align-items: center;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    margin-top: 1em;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.my-nav-right {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .my-nav{
+    margin-right: 1em;
     padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: aquamarine;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    list-style-type: none;
 }
 
 
@@ -25,33 +42,71 @@ a{
     color: black;
 }
 
+#titre_principale, .sous_titre, #paragraphe_presentation{
+    font-family: 'Roboto', sans-serif;
+}
+
 h1#titre_principale{
     font-size: 2em;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: aquamarine;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: #333333; /* Gris foncé */
+}
+
+#paragraphe_presentation{
+    text-align: left;
+    margin-top: 3em;
 }
 
 .sous_titre{
     font-size: 1.5em;
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left : 200px;
     color: aquamarine;
 }
 
-p#paragraphe_presentation{
-    text-align: justify;
+#titre-competences {
+    text-align: left;
+    margin-top: 20em;
+}
+.competence {
+    margin: 1em 0;
 }
 
+.bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 1.5625rem; 
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    height: 1.5625rem; 
+    width: 0;
+    background-color: aquamarine;
+    border-radius: 1.5625rem; 
+    transition: width 2s; /* Transition de 2 secondes quand la largeur de la barre est affécter */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+/* Ajout de la règle CSS pour les écrans de tablette */
 @media (min-width: 768px) {
     body {
         font-size: 18px;
     }
 }
 
+/* Ajout de la règle CSS pour les écrans d'ordinateur */
 @media (min-width: 1024px) {
     body {
         font-size: 20px;
@@ -59,36 +114,18 @@ p#paragraphe_presentation{
         margin-left: 10em;
     }
     
-    #my-navigation{
-        display: grid;
-        grid-template:  1fr / 6% 62% 3% 7% 7%;
-        align-items: flex-start;
-        list-style-type: none;
+    #my-navigation {
+        justify-content: space-between;
         margin-top: 2em;
-        margin-left: 1em;
-        padding: 0;
-        overflow: hidden;
+    }
+
+    .my-nav-right {
+        display: flex;
         gap: 1em; /* Espacement entre les éléments de navigation à droite */
     }
 
-    #Accueil{
-        grid-column: 1;
-        text-align: center;
-    }
-    
-    #CV{
-        grid-column: 3;
-        text-align: center;
-    }
-    
-    #projets{
-        grid-column: 4;
-        text-align: center;
-    }
-    
-    #contact{
-        grid-column: 5;
-        text-align: center;
+    #Accueil {
+        margin-left: 0; /* Aligne "Accueil" à gauche */
     }
 
 }

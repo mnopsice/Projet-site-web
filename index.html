@@ -35,23 +35,64 @@
             </p>
         </section>
 
-        <section>
-            <h2 id="titre_competences" class="sous_titre"> Mes compétences </h2>
-            <ul id="compétences">
-                <li> SQL </li>
-                <li> Symphony </li>
-                <li> HTML/CSS </li>
-                <li> PHP </li>
-                <li> JavaScript </li>
-                <li> JAVA </li>
-                <li> Python </li>
-            </ul>
-         </section>
+        <section id="section-competence">
+            <h2 id="titre-competences" class="sous_titre"> Mes compétences </h2>
+            <div class="competence">
+                <label>SQL</label>
+                <ul class="bar-container">
+                    <li class="bar" id="sql-bar" data-level="80"></li>
+                </ul>
+            </div>
+            <input type="hidden" id="sql-input">
+            <div class="competence">
+                <label class="symphony">Symphony</label>
+                <ul class="bar-container">
+                    <li class="bar" id="symphony" data-level="60"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>HTML/CSS</label>
+                <ul class="bar-container">
+                    <li class="bar" id="html-css" data-level="80"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>PHP</label>
+                <ul class="bar-container">
+                    <li class="bar" id="php" data-level="50"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>JavaScript</label>
+                <ul class="bar-container">
+                    <li class="bar" id="javascript" data-level="40"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>Python</label>
+                <ul class="bar-container">
+                    <li class="bar" id="python" data-level="40"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>JAVA</label>
+                <ul class="bar-container">
+                    <li class="bar" id="java" data-level="65"></li>
+                </ul>
+            </div>
+            <div class="competence">
+                <label>Git</label>
+                <ul class="bar-container">
+                    <li class="bar" id="git" data-level="70"></li>
+                </ul>
+            </div>
+
+        </section>
 
         <footer> 
                 <a id="linkedin" href="https://www.linkedin.com/in/mathis-commergnat-4a0222296/">Linkedin</a>
         </footer>
-
+        <script src="portfolio.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
