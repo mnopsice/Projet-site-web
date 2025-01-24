@@ -65,12 +65,14 @@ h1#titre_principale{
     color: aquamarine;
 }
 
+/* Ajout de la règle CSS pour les écrans de tablette */
 @media (min-width: 768px) {
     body {
         font-size: 18px;
     }
 }
 
+/* Ajout de la règle CSS pour les écrans d'ordinateur */
 @media (min-width: 1024px) {
     body {
         font-size: 20px;
