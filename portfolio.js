@@ -29,3 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateBars);
     animateBars(); // Appel initial pour vérifier si les barres sont déjà visibles
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    //On récupère l'élément qui correspond au bouton
+    const fetchDogFactButton = document.getElementById('fetch-dog-fact');
+    //On récupère l'élément qui correspond au paragraph qui va afficher le texte
+    const dogFactParagraph = document.getElementById('dog-fact');
+
+    //On écoute l'événement click sur le bouton
+    fetchDogFactButton.addEventListener('click', function() {
+        //On fait une requête pour récupérer un fait sur les chiens à travers l'api
+        fetch('https://dog-api.kinduff.com/api/facts')
+            .then(response => response.json())
+            .then(data => {
+                const fact = data.facts[0];
+                dogFactParagraph.textContent = fact;
+            })
+            //Si une erreur survient lors de la récupération du fait, on affiche un message d'erreur
+            .catch(error => {
+                //On affiche l'erreur dans la console
+                console.error('Erreur:', error);
+                //On affiche un message d'erreur dans le paragraphe
+                dogFactParagraph.textContent = 'Une erreur est survenue lors de la récupération du fait.';
+            });
+    });
+});

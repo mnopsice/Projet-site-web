@@ -64,6 +64,10 @@ h1#titre_principale{
     color: aquamarine;
 }
 
+#section-dog-facts {
+    margin-top: 3em;
+}
+
 #titre-competences {
     text-align: left;
     margin-top: 2em;
