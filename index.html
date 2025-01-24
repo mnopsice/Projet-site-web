@@ -12,25 +12,29 @@
 
     <body>
         <header>  
-            <ul id="my-navigation">
+            <ul id="my-navigation" class="my-navigation">
                 <li id="Accueil" class="my-nav"><a href="index.html">Accueil</a></li>
-                <li id="CV" class="my-nav"><a href="cv.html">CV</a></li>
-                <li id="Projets" class="my-nav"><a href="projets.html">Projets</a></li>
-                <li id="Contact" class="my-nav"><a href="contact.html">Contact</a></li>
+                <!--éléments alignés à droite la balise "li" sert à ce que le code soit alider par le W3C en évitant une balise div-->
+                <li>
+                    <ul class="my-nav-right">
+                        <li id="CV" class="my-nav"><a href="cv.html">CV</a></li>
+                        <li id="Projets" class="my-nav"><a href="projets.html">Projets</a></li>
+                        <li id="Contact" class="my-nav"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <h1 id="titre_principale"> Mathis COMMERGNAT </h1> 
         </header>
 
         <section>
-            <h2 id="titre_presentation" class="sous_titre" > Présentation </h2>
             <p id="paragraphe_presentation">
                 Ancien étudiant de BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) à travers lequel j’ai étudié le développement d’applications web et Android. <br>
                 Actuellement étudiant chez livecampus pour obtenir un Bachelor Concepteur Développeur d'Applications. <br>
                 Je suis activement à la recherche d'une alternance pour ma formation.   
             </p>
         </section>
-        
+
         <section>
             <h2 id="titre_competences" class="sous_titre"> Mes compétences </h2>
             <ul id="compétences">
@@ -46,7 +50,6 @@
 
         <footer> 
                 <a id="linkedin" href="https://www.linkedin.com/in/mathis-commergnat-4a0222296/">Linkedin</a>
-                test
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
