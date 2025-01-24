@@ -34,19 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     //On récupère l'élément qui correspond au bouton
     const fetchDogFactButton = document.getElementById('fetch-dog-fact');
-    //On récupère l'élément qui correspond au paragraph qui va afficher le texte
+    //On récupère l'élément qui correspond au paragraphe qui va afficher le texte
     const dogFactParagraph = document.getElementById('dog-fact');
 
     //On écoute l'événement click sur le bouton
     fetchDogFactButton.addEventListener('click', function() {
-        //On fait une requête pour récupérer un fait sur les chiens à travers l'api
+        //On va chercher ce qui nous interesse sur l'api
         fetch('https://dog-api.kinduff.com/api/facts')
+            //On récupère la réponse de l'apiet on la transforme en JSON
             .then(response => response.json())
+            //On récupère les données
             .then(data => {
+                //les données sont sous la forme d'une liste dans l'api on prend donc le premier élément
                 const fact = data.facts[0];
+                //On affiche ce qu'on a récupéré dans le paragraphe
                 dogFactParagraph.textContent = fact;
             })
-            //Si une erreur survient lors de la récupération du fait, on affiche un message d'erreur
+            //Si une erreur survient on affiche un message d'erreur
             .catch(error => {
                 //On affiche l'erreur dans la console
                 console.error('Erreur:', error);
