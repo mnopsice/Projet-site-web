@@ -65,6 +65,40 @@ h1#titre_principale{
     color: aquamarine;
 }
 
+#titre-competences {
+    text-align: left;
+    margin-top: 20em;
+}
+.competence {
+    margin: 1em 0;
+}
+
+.bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 1.5625rem; 
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    height: 1.5625rem; 
+    width: 0;
+    background-color: aquamarine;
+    border-radius: 1.5625rem; 
+    transition: width 2s; /* Transition de 2 secondes quand la largeur de la barre est affécter */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
 /* Ajout de la règle CSS pour les écrans de tablette */
 @media (min-width: 768px) {
     body {
