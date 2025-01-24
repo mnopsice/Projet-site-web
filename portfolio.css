@@ -3,7 +3,6 @@ body {
     background-color: white;
     margin: 0 auto; /* Centrer le contenu */
     padding: 0 10%; /* 10% de marge à gauche et à droite */
-    max-width: 1200px; /* Largeur maximale du conteneur */
 }
 
 #my-navigation{
@@ -67,7 +66,7 @@ h1#titre_principale{
 
 #titre-competences {
     text-align: left;
-    margin-top: 20em;
+    margin-top: 2em;
 }
 .competence {
     margin: 1em 0;
@@ -95,14 +94,38 @@ h1#titre_principale{
 
 label {
     font-weight: bold;
-    display: block;
     margin-bottom: 0.5em;
 }
+
+.icones {
+    width: 2em;
+    height: 2em;
+}
+
+.label-icone {
+    font-weight: bold;
+    display: flex;
+}
+
 
 /* Ajout de la règle CSS pour les écrans de tablette */
 @media (min-width: 768px) {
     body {
         font-size: 18px;
+    }
+
+    #my-navigation {
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+
+    .my-nav-right {
+        display: flex;
+        gap: 1em; /* Espacement entre les éléments de navigation à droite */
+    }
+
+    #Accueil {
+        margin-left: 0; /* Aligne "Accueil" à gauche */
     }
 }
 

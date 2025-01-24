@@ -1,3 +1,4 @@
+// DomContentLoaded est un événement qui est déclenché lorsque le document HTML a été complètement chargé et analysé, sans attendre les feuilles de style, les images et les sous-documents chargés.
 document.addEventListener('DOMContentLoaded', function() {
     // Stocke dans la variable bars toutes les barres de compétences
     const bars = document.querySelectorAll('.bar');
