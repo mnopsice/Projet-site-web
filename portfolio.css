@@ -209,6 +209,11 @@ footer {
     #Accueil {
         margin-left: 0; /* Aligne "Accueil" à gauche */
     }
+
+    #CV-pdf-affichage {
+        width: 100%;
+        height: 50vh; 
+    }
 }
 
 /* Ajout de la règle CSS pour les écrans d'ordinateur */
@@ -242,5 +247,9 @@ footer {
         width: 1000px;
     }
 
+    #CV-pdf-affichage {
+        width: 100%;
+        height: 100vh; 
+    }
 
 }
