@@ -1,3 +1,4 @@
+//code pour les annimation des barre dans les compétences
 // DomContentLoaded est un événement qui est déclenché lorsque le document HTML a été complètement chargé et analysé, sans attendre les feuilles de style, les images et les sous-documents chargés.
 document.addEventListener('DOMContentLoaded', function() {
     // Stocke dans la variable bars toutes les barres de compétences
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animateBars(); // Appel initial pour vérifier si les barres sont déjà visibles
 });
 
-
+//code pour l'API
 document.addEventListener('DOMContentLoaded', function() {
     //On récupère l'élément qui correspond au bouton
     const fetchDogFactButton = document.getElementById('fetch-dog-fact');
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchDogFactButton.addEventListener('click', function() {
         //On va chercher ce qui nous interesse sur l'api
         fetch('https://dog-api.kinduff.com/api/facts')
-            //On récupère la réponse de l'apiet on la transforme en JSON
+            //On récupère la réponse de l'api et on la transforme en JSON
             .then(response => response.json())
             //On récupère les données
             .then(data => {
@@ -57,5 +58,89 @@ document.addEventListener('DOMContentLoaded', function() {
                 //On affiche un message d'erreur dans le paragraphe
                 dogFactParagraph.textContent = 'Une erreur est survenue lors de la récupération du fait.';
             });
+    });
+});
+
+//code pour le formulaire de contact
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    // Récupérer les données du stockage local et pré-remplir les champs
+    const storedName = localStorage.getItem('name');
+    const storedEmail = localStorage.getItem('email');
+
+    if (storedName) {
+        nameInput.value = storedName;
+    }
+
+    if (storedEmail) {
+        emailInput.value = storedEmail;
+    }
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page 
+                                //pour pas que l'utilisateur se retrouve en haut de la page après avoir envoyer son message
+
+        // Récupérer les données du formulaire
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = document.getElementById('message').value;
+
+        // Valider les données
+        let valid = true;
+
+        if (name === "") {
+            document.getElementById('errorname').innerHTML = "Veuillez entrer un nom valide";
+            valid = false;
+        } else {
+            document.getElementById('errorname').innerHTML = "";
+        }
+
+        if (email.indexOf("@") < 0 || email.indexOf(".") < 0) {
+            document.getElementById('erroremail').innerHTML = "Veuillez entrer une adresse email valide";
+            valid = false;
+        } else {
+            document.getElementById('erroremail').innerHTML = "";
+        }
+
+        if (message === "") {
+            document.getElementById('errormsg').innerHTML = "Veuillez entrer un message valide";
+            valid = false;
+        } else {
+            document.getElementById('errormsg').innerHTML = "";
+        }
+
+        if (valid) {
+            // Enregistrer le nom et l'email dans le stockage local
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+
+            // Traiter les données pour les envoyer à un serveur
+            console.log("Nom:", name);
+            console.log("Email:", email);
+            console.log("Message:", message);
+
+            // Simulation de l'envoie des données vers un serveur distant avec l'api jsonplaceholder.typicode.com
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Succès:', data);
+                alert('Votre message a été envoyé avec succès!');
+                form.reset(); // Réinitialiser le formulaire
+            })
+
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue lors de l\'envoi de votre message.');
+            });
+        }
     });
 });

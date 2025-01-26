@@ -5,6 +5,11 @@ body {
     padding: 0 10%; /* 10% de marge à gauche et à droite */
 }
 
+.separateur{
+    color: #000000; 
+    margin-top: 2em;
+}
+
 #my-navigation{
     display: flex;
     justify-content: flex-start;
@@ -133,13 +138,62 @@ label {
 footer {
     text-align: center;
     margin-top: 2em;
+    margin-bottom: 1em;
     padding: 1em;
     background-color: #d6cfcf;
+
 }
+
+#mes-liens {
+    margin-top: 2em;
+}
+
+#mes-liens-titre {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* CSS formulaire de contact */
+
+.contact-form {
+    margin: 0.8em auto;
+    width: 100%;
+    padding: 1em;
+    font: 0.8em "roboto", sans-serif;
+  }
+
+.form-group {
+    display: block;
+    list-style: none;
+    margin: 1em;
+}
+
+.form-group label {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+#message {
+    height: 12em;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+
 /* Ajout de la règle CSS pour les écrans de tablette */
 @media (min-width: 768px) {
     body {
         font-size: 18px;
+        margin-right: 8em;
+        margin-left: 8em;
     }
 
     #my-navigation {
@@ -178,5 +232,15 @@ footer {
     #Accueil {
         margin-left: 0; /* Aligne "Accueil" à gauche */
     }
+
+    #contact-form {
+        width: 600px;
+        margin: 0 auto; 
+    }
+
+    #section-competence{
+        width: 1000px;
+    }
+
 
 }

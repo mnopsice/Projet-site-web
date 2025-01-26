@@ -41,8 +41,65 @@
         </main>
 
         <footer> 
-            <a id="linkedin" href="https://www.linkedin.com/in/mathis-commergnat-4a0222296/">Linkedin</a>
+
+            <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+                <table class="form-style">
+                   <tr>
+                      <td>
+                         <label>
+                            Votre nom <span class="required">*</span>
+                         </label>
+                      </td>
+                      <td>
+                         <input type="text" name="name" class="long">
+                         <span class="error" id="errorname"></span>
+                      </td>
+                   </tr>
+                   <tr>
+                      <td>
+                         <label>
+                            Votre adresse e-mail <span class="required">*</span>
+                         </label>
+                      </td>
+                      <td>
+                         <input type="email" name="email" class="long">
+                         <span class="error" id="erroremail"></span>
+                      </td>
+                   </tr>
+                   <tr>
+                      <td>
+                         <label>
+                            Message <span class="required">*</span>
+                         </label>
+                      </td>
+                      <td>
+                         <textarea name="message" class="long field-textarea"></textarea>
+                         <span class="error" id="errormsg"></span>
+                      </td>
+                   </tr>
+                   <tr>
+                      <td></td>
+                      <td>
+                         <input type="submit" value="Envoyer">      
+                         <input type="reset" value="Réinitialiser"> 
+                      </td>
+                   </tr>
+                </table>
+             </form>
+             
+             <div id="mes-liens">
+                <a id="linkedin" href="https://www.linkedin.com/in/mathis-commergnat-4a0222296/">
+                    <img id="image-linkedin" src="Galerie/Icones/icone-linkedin.png" alt="LinkedIn">
+                </a>
+
+                <a id="Github" href="https://github.com/mnopsice?tab=repositories">
+                    <img id="image-Github" src="Galerie/Icones/icone-github.png" alt="GitHub">
+                </a>
+            </div>
+
         </footer>
+
+
     <script src="portfolio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
