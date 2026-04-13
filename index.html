@@ -12,19 +12,21 @@
 
     <body>
         <header>  
-            <ul id="my-navigation" class="my-navigation">
-                <li id="Accueil" class="my-nav"><a href="index.html">Accueil</a></li>
-                <!--éléments alignés à droite la balise "li" sert à ce que le code soit alider par le W3C en évitant une balise div-->
-                <li>
-                    <ul class="my-nav-right">
-                        <li id="Menu-CV" class="my-nav"><a href="cv.html">CV</a></li>
-                        <li id="Menu-competence" class="my-nav"><a href="#section-competence">Compétences</a></li>
-                        <li id="Menu-Contact" class="my-nav"><a href="#contact-form">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="top">
+                <ul id="my-navigation" class="my-navigation">
+                    <li id="Accueil" class="my-nav"><a href="index.html">Accueil</a></li>
+                    <!--éléments alignés à droite la balise "li" sert à ce que le code soit alider par le W3C en évitant une balise div-->
+                    <li>
+                        <ul class="my-nav-right">
+                            <li id="Menu-CV" class="my-nav"><a href="#paragraphe_presentation">CV</a></li>
+                            <li id="Menu-competence" class="my-nav"><a href="#section-competence">Compétences</a></li>
+                            <li id="Menu-Contact" class="my-nav"><a href="#contact-form">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-            <h1 id="titre_principale"> Mathis COMMERGNAT </h1> 
+                <h1 id="titre_principale"> Mathis COMMERGNAT </h1> 
         </header>
 
         <p id="paragraphe_presentation">
@@ -40,15 +42,6 @@
             role="button"
             target="_blank"> Mon CV
         </a>
-
-        <hr class="separateur">
-
-        <!-- API dog facts par ce qu'il fallait intégré une API je crois-->
-        <section id="section-dog-facts">
-            <h2 class="sous_titre">Dog facts</h2>
-            <button id="fetch-dog-fact" class="btn btn-primary">Obtenir une facts sur les chiens</button>
-            <p id="dog-fact"></p>
-        </section>
 
         <hr class="separateur">
         

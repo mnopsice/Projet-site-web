@@ -2,30 +2,45 @@ body {
     font-size: 16px;
     background-color: white;
     margin: 0 auto; /* Centrer le contenu */
-    padding: 0 10%; /* 10% de marge à gauche et à droite */
+    padding: 0 20%; /* 10% de marge à gauche et à droite */
+    padding-top: 4em; 
 }
 
 .separateur{
     color: #000000; 
     margin-top: 2em;
 }
-
-#my-navigation{
+/*
+#my-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 1em 10%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 1em;
+}
+*/
+ul#my-navigation{
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     list-style-type: none;
+    top: 0;
     padding: 0;
     margin: 0;
-    margin-top: 1em;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
+    background-color: white;
+    height: 5em;
+    width: 100%;
+    z-index: 9999;   
 }
 
-.my-nav-right {
-    display: flex;
-    justify-content: flex-start;
-}
+
 
 .my-nav{
     margin-right: 1em;
@@ -40,6 +55,12 @@ body {
     font-weight: bold;
     transition: background-color 0.3s;
     list-style-type: none;
+}
+
+.my-nav-right {
+    display: flex;
+    justify-content: flex-end;
+   
 }
 
 
@@ -203,7 +224,7 @@ footer {
 
     .my-nav-right {
         display: flex;
-        gap: 1em; /* Espacement entre les éléments de navigation à droite */
+        
     }
 
     #Accueil {
